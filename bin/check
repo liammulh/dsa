@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#
+# Pre-submit check.
+
+# Format.
+black .
+
+# Lint the ds directory.
+pylint ds
+
+# Check types.
+mypy .
+
+# Run tests.
+pytest
